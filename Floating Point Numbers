@@ -1,0 +1,67 @@
+In Java, we know that there are primtive types such as:
+  - 1 byte: boolean
+  - 2 bytes: char  
+  - 4 bytes: int  
+  - 8 bytes: double 
+
+Integers have boundaries and floating point numbers have precision issues. Every primitive data type 
+has a wrapper class. 
+
+Interesting observation in Python:
+
+>>> x = 0.1
+>>> sum = x + x + x
+>>> sum == 0.3
+>>> sum 
+0.30000000000000004
+
+To understand why this happens, we need to observe how numbers are stored in the computer. For integers, like 148, 207, these are
+very easy to store since they are stored as binary numbers. However. decimals are a lot harder to store. 
+
+Integers can be represented in binary as follows: 
+
+1. Write the powers of 2 upto the actual number you want to represent 
+2. Subtract the numbers closer to it and tally a one under it 
+3. Collect and the ones and zeros and that is the binary representation! 
+
+Integers can be expressed with a finite number of binary digits but decimals cannot. 
+
+Decimals though can be expressed in complicated sigma sums. 
+
+All computers have a finite amount of memory. Its impossible for computers to store the accurate value of a number with infinite binary representation 
+
+How do we represent these numbers then?
+
+- 16 bits are for the whole number part and 16 for the fractional part 
+- We know in scientific notation we represent the zeros as a power of 10s and replace the 10 in the stanard form with an e. To represent something in binary, instead 
+of having the base to be 10, the base must be 2. 
+
+The mantissa is the number before the decimal point which must be between 1 and 9. 
+For exmaple, in 2.17e-33, 2 is the Mantissa. 
+
+Using this, we represent decimals as follows: 
+
+-6.84 can be written as -1.71 x 2^2 
+
+Notice that the highest this number can be divided by is 4, which is 2^2. 
+
+IEEE FLOATING POINT NUMBER:
+
+Usually numbers are represented like this: 
+
+-2.17e-33
+
+* 1 bit for the sign ( 0 for positive /1 for negative)
+* 23 bits for the Mantissa (2.17)
+* 8 bits for the exponent e 
+
+
+Single precision vs double precision 
+
+
+
+
+
+
+
+
